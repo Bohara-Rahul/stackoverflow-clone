@@ -38,6 +38,11 @@ class User extends Authenticatable
         return $this->hasMany(Question::class);
     }
 
+    public function getUrlAttribute()
+    {
+        
+    }
+
     /**
      * Get the attributes that should be cast.
      *

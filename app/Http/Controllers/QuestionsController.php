@@ -12,9 +12,10 @@ class QuestionsController extends Controller
      */
     public function index()
     {
-        $questions = Question::latest()->paginate(5);
+        //DB::connection()->enableQueryLog();
+        $questions = Question::with('user')->latest()->paginate(5);
 
-        return view('questions.index', ['questions' => $questions]);
+        return view('questions.index', compact('questions'));
     }
 
     /**
@@ -38,7 +39,7 @@ class QuestionsController extends Controller
      */
     public function show(Question $question)
     {
-        //
+        return view('questions.show', compact('question'));
     }
 
     /**
