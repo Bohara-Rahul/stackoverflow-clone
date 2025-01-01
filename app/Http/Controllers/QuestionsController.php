@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\AskQuestionRequest;
 use App\Models\Question;
 use Illuminate\Http\Request;
 
@@ -23,15 +24,15 @@ class QuestionsController extends Controller
      */
     public function create()
     {
-        //
+        return view('questions.create');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(AskQuestionRequest $request)
     {
-        //
+        
     }
 
     /**

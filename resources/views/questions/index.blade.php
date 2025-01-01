@@ -4,8 +4,13 @@
     <div class="row justify-content-center">
       <div class="col-md-8">
         <div class="card">
-          <div class="card-header">All Questions</div>
-
+          <div class="d-flex justify-content-between align-items-cente">
+            <div class="card-header">All Questions</div>
+            <a class="btn" href="{{ route('questions.create') }}">
+              Create New Question
+            </a>
+          </div>
+      
           <div class="card-body">
             @foreach ($questions as $question)
                 <div class="media">
